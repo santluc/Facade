@@ -1,31 +1,16 @@
-public class Bebida {
+    public class Bebida extends Produto {
 
-    private String descricao;
-    private double preco;
+        private double preco;
 
-    public Bebida() {
-        this.descricao = "Refrigerante";
-        this.preco = 5.00;
+        public Bebida() {
+            this.descricao = "Refrigerante";
+            this.preco = 5.00;
+        }
+    
+        @Override
+        public double calcularPrecoFinal() {
+            return this.preco;
+        }
     }
+    
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getDescricao() {
-        return this.descricao;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public double getPreco() {
-        return this.preco;
-    }
-
-    @Override
-    public String toString() {
-        return this.descricao;
-    }
-}

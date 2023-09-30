@@ -7,11 +7,11 @@ public class Main {
         System.out.println("2. Super Combo"); 
         System.out.print("Sua escolha: "); 
  
-        Scanner input = new Scanner(System.in); 
- 
-        int tipo = input.nextInt(); 
-        Combo combo = new Combo(); 
-        combo.CriarCombo(tipo); 
-        System.out.println(combo); 
+        try (Scanner input = new Scanner(System.in)) {
+            int tipo = input.nextInt(); 
+            Combo combo = new Combo(); 
+            combo.CriarCombo(tipo); 
+            System.out.println(combo);
+        } 
     } 
 } 

@@ -1,6 +1,5 @@
-public class Burguer {
+public class Burguer extends Produto {
 
-    private String descricao;
     private double preco;
 
     public Burguer() {
@@ -8,25 +7,8 @@ public class Burguer {
         this.preco = 25.00;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getDescricao() {
-        return this.descricao;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public double getPreco() {
+    @Override
+    public double calcularPrecoFinal() {
         return this.preco;
     }
-
-    @Override
-    public String toString() {
-        return this.descricao;
-    }
 }
-
